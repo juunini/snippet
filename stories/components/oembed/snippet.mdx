@@ -1,0 +1,91 @@
+import { Meta } from '@storybook/blocks';
+
+import '../../../public/snippet.css';
+
+<Meta title="components/oembed/snippet" />
+
+# Preview
+
+export const go = `package main
+
+func main() {
+  fmt.Println("Hello, World!")
+}`;
+export const js = `console.log("Hello, World!");`;
+export const python = `print("Hello, World!")`;
+
+<div className="snippet">
+  <input type="radio" name="noteid-snippet" value="noteid-hello.go" id="noteid-hello.go" defaultChecked />
+  <label htmlFor="noteid-hello.go">hello.go</label>
+  <pre>
+    <code>
+      {go}
+    </code>
+  </pre>
+
+  <input type="radio" name="noteid-snippet" value="noteid-hello.js" id="noteid-hello.js" />
+  <label htmlFor="noteid-hello.js">hello.js</label>
+  <pre>
+    <code>
+      {js}
+    </code>
+  </pre>
+
+  <input type="radio" name="noteid-snippet" value="noteid-hello.py" id="noteid-hello.py" />
+  <label htmlFor="noteid-hello.py">hello.py</label>
+  <pre>
+    <code>
+      {python}
+    </code>
+  </pre>
+
+  <a href="https://snippet.social/notes/noteid" target="_blank" class="go-to-note">
+    <img src="https://snippet.social/favicon.webp" alt="snippet logo" />
+    go to note
+  </a>
+</div>
+
+# Usage
+
+export const code = `<style rel="stylesheet" href="https://snippet.social/snippet.css"></style>
+
+<div class="snippet">
+  <input type="radio" name="noteid-snippet" value="noteid-hello.go" id="noteid-hello.go" checked />
+  <label for="noteid-hello.go">hello.go</label>
+  <pre>
+    <code>
+package main
+
+func main() \\{
+fmt.Println("Hello, World!")
+\\}
+    </code>
+  </pre>
+
+  <input type="radio" name="noteid-snippet" value="noteid-hello.js" id="noteid-hello.js" />
+  <label for="noteid-hello.js">hello.js</label>
+  <pre>
+    <code>
+console.log("Hello, World!");
+    </code>
+  </pre>
+
+  <input type="radio" name="noteid-snippet" value="noteid-hello.py" id="noteid-hello.py" />
+  <label for="noteid-hello.py">hello.py</label>
+  <pre>
+    <code>
+print("Hello, World!")
+    </code>
+  </pre>
+
+  <a href="https://snippet.social/notes/noteid" target="_blank" class="go-to-note">
+    <img src="https://snippet.social/favicon.webp" alt="snippet logo" />
+    go to note
+  </a>
+</div>`;
+
+<pre>
+  <code>
+    {code}
+  </code>
+</pre>
