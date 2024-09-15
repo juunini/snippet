@@ -1,0 +1,107 @@
+import { Meta } from '@storybook/blocks';
+
+import '../../../public/note.css';
+import '../../../public/snippet.css';
+
+<Meta title="components/oembed/note" />
+
+# Preview
+
+export const go = `package main
+
+func main() {
+  fmt.Println("Hello, World!")
+}`;
+export const js = `console.log("Hello, World!");`;
+export const python = `print("Hello, World!")`;
+
+<article className="note">
+  <h2>
+    <a href="https://snippet.social/@juunini">
+      <img src="https://snippet.social/icons/juunini" alt="icon" />
+      juunini
+    </a>
+  </h2>
+  <small>2024-09-15 23:38:31 (+09:00 KST)</small>
+
+  <p>Here are some code snippets in Go, JavaScript, and Python that print "Hello, World!" to the console.</p>
+
+  <div className="snippet">
+    <input type="radio" name="snippetid-snippet" value="snippetid-hello.go" id="snippetid-hello.go" defaultChecked />
+    <label htmlFor="snippetid-hello.go">hello.go</label>
+    <pre>
+      <code>
+        {go}
+      </code>
+    </pre>
+
+    <input type="radio" name="snippetid-snippet" value="snippetid-hello.js" id="snippetid-hello.js" />
+    <label htmlFor="snippetid-hello.js">hello.js</label>
+    <pre>
+      <code>
+        {js}
+      </code>
+    </pre>
+
+    <input type="radio" name="snippetid-snippet" value="snippetid-hello.py" id="snippetid-hello.py" />
+    <label htmlFor="snippetid-hello.py">hello.py</label>
+    <pre>
+      <code>
+        {python}
+      </code>
+    </pre>
+  </div>
+</article>
+
+# Usage
+
+export const code = `<style rel="stylesheet" href="https://snippet.social/note.css"></style>
+<style rel="stylesheet" href="https://snippet.social/snippet.css"></style>
+
+<article class="note">
+  <h2>
+    <a href="https://snippet.social/@juunini">
+      <img src="https://snippet.social/icons/juunini" alt="icon" />
+      juunini
+    </a>
+  </h2>
+  <small>2024-09-15 23:38:31 (+09:00 KST)</small>
+
+  <p>Here are some code snippets in Go, JavaScript, and Python that print "Hello, World!" to the console.</p>
+
+  <div class="snippet">
+    <input type="radio" name="snippetid-snippet" value="snippetid-hello.go" id="snippetid-hello.go" checked />
+    <label for="snippetid-hello.go">hello.go</label>
+    <pre>
+      <code>
+  package main
+
+  func main() \\{
+  fmt.Println("Hello, World!")
+  \\}
+      </code>
+    </pre>
+
+    <input type="radio" name="snippetid-snippet" value="snippetid-hello.js" id="snippetid-hello.js" />
+    <label for="snippetid-hello.js">hello.js</label>
+    <pre>
+      <code>
+  console.log("Hello, World!");
+      </code>
+    </pre>
+
+    <input type="radio" name="snippetid-snippet" value="snippetid-hello.py" id="snippetid-hello.py" />
+    <label for="snippetid-hello.py">hello.py</label>
+    <pre>
+      <code>
+  print("Hello, World!")
+      </code>
+    </pre>
+  </div>
+</article>`;
+
+<pre>
+  <code>
+    {code}
+  </code>
+</pre>
